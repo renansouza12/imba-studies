@@ -1,43 +1,68 @@
-# Welcome to Imba
+let num = 4
+let done = 4
+let msg = ""
+let isWeekend? = no
 
-# JS console.log
-console.log("Hello World")
-# console.log("Hello World")
+console.log "Are we done yet"
 
-# Imba console.log
-console.log "Hello World"
+# if / else
 
+if num === 4
+	msg = "oui"
+elif num done > 0 # you can use else if or elif
+	msg = "presque"
+else 
+	msg = "non"
 
-const name = "Renan"
+# trailing conditionals	
 
-console.log "Salut, j'm appele {name}"
+msg = "oui" if done === num
 
-
-
-let numHabits = 5
-# let numHabits = 5;
-
-let habitComplete? = yes # you can use  yes or no instead true and false
-# let habitComplete = false;
-
-let myHabits = ['exercise' 
-				'study'
-				'clean up']
-# let myHabits = ['exercise', 'study', 'clean up'];
-
-let habitDetails = 
-	name: "exercise"
-	done: false
-	completions: 12
-# let habitDetails = {name: "exercise", done: false, completions: 12};
+msg = "non" unless done === num # print non if done is different num
 
 
+# unless
+
+unless done === num
+	msg = "non"
 
 
-# Try It!
-# Use console.log to print out the name property of habitDetails
-# Use Javascript's built-in string.toUpperCase() method to print
-# the result in all capitals.
+# and / or
+
+msg = "not yet" unless (done === num) or (done === 0)	 # you can use OR ou || and AND or &&
 
 
-console.log habitDetails.name.toUpperCase()
+# one line conditional
+
+msg = if done === num then "oui" else "non"
+
+console.log msg
+
+
+
+# Challenge
+# Create a conditional that satisfies this description:
+#
+# On the weekend:
+# log to the console: "take the day off"
+# unless some habits have already been completed
+#
+# On weekdays:
+# if all habits are done log "you did it"
+# if no habits are done, log "get going"
+# if some habits are done log "keep it up"
+
+
+
+if isWeekend?
+	console.log "take the day off" unless done > 0
+else
+	if done === num
+		console.log "you did it"
+	elif done === 0
+		console.log "get going"
+	else
+		console.log "keep it up"
+
+
+
